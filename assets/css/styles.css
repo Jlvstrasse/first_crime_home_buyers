@@ -1,0 +1,19 @@
+* {
+    /* background: linear-gradient(45deg, rgb(27, 72, 71), rgb(253, 253, 0)); */
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(27, 72, 71);
+}
+
+header {
+    border-bottom: 2px solid white;
+    color: azure;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
