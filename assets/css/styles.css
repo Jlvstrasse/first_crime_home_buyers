@@ -57,7 +57,19 @@ footer {
 }
 
 
-#modal {
+.modal {
+    display: none;
+}
+
+.modal.is-active {
+    display: block;
+  }
+
+#modal-trigger {
     background-color: var(--orange);
-    color: var(--dark);
+    color: var(--words);
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--dark);
+    margin: 1.5rem;
 }

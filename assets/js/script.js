@@ -45,3 +45,28 @@ window.onload = function () {
     searchWord(word);
     searchGifs(word);
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modalTrigger = document.getElementById('modal-trigger');
+    const modal = document.getElementById('modal');
+    const modalClose = modal.querySelector('.modal-close');
+  
+    // Function to toggle modal visibility
+    function toggleModal() {
+      modal.classList.toggle('is-active');
+    }
+  
+    // Event listener for button click to toggle modal
+    modalTrigger.addEventListener('click', toggleModal);
+  
+    // Event listener for modal close button click to close modal
+    modalClose.addEventListener('click', toggleModal);
+  
+    // Close modal when clicking outside modal content
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        toggleModal();
+      }
+    });
+  });

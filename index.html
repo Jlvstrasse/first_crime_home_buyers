@@ -25,16 +25,21 @@
 
         <section>
             <h3> &#129300; What's the Word?</h3>
-            <button id="modal" class="button is-normal is-responsive is-primary is-dark"> Click
-                <div class="modal">
-                    <div class="modal-background"></div>
-                        <div class="modal-content">
-                            <input type="text" placeholder="Search...">
-                        </div>
-                    <button class="modal-close is-large" aria-label="close"></button>
+
+            <button id="modal-trigger" class="button is-primary">Click to Search</button>
+
+            <div id="modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <p>Search Any Word</p>
+                    <input type="text" placeholder="Search...">
                 </div>
+                <button class="modal-close" aria-label="close"></button>
+            </div>
+
             
-            </button>
+            
+            
         </section>
     </main>
 
@@ -42,5 +47,7 @@
         <h2>Created by MD, JM, JV</h2>
         <h2>&copy 2024</h2>
     </footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
