@@ -1,3 +1,10 @@
+:root {
+    --dark: rgb(81, 130, 155);
+    --light: rgb(155, 176, 193);
+    --orange: rgb(246, 153, 92);
+    --words: rgb(234, 223, 180)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,25 +12,23 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    /* background-color: rgb(155, 176, 193) */
-    /* background-color: rgb(81, 130, 155); */
-    /* background-color: rgb(27, 72, 71); */
+
 }
 
 header {
-    border-bottom: 2px solid rgb(246, 153, 92);
-    color: rgb(234, 223, 180);
+    border-bottom: 2px solid var(--orange);
+    color: var(--words);
     font-size: 5rem; 
     display: flex;
     justify-content: center;
     padding: 1rem 0;
-    background-color: rgb(81, 130, 155);
+    background-color: var(--dark);
  } 
 
 main {
     padding-top: 30px;
-    color: rgb(234, 223, 180);
-    background-color: rgb(155, 176, 193)
+    color: var(--words);
+    background-color: var(--light);
 
 }
 
@@ -34,9 +39,9 @@ h2 {
 }
 
 figure {
-    border: 2px solid rgb(81, 130, 155);
+    border: 2px solid var(--dark);
     padding: 1rem;
-    background-color: rgb(246, 153, 92);
+    background-color: var(--orange);
     margin: 2rem;
 }
 
@@ -47,6 +52,12 @@ figure {
 }
 
 footer {
-    color: rgb(246, 153, 92);
-    background-color: rgb(81, 130, 155);
+    color: var(--orange);
+    background-color: var(--dark);
+}
+
+
+#modal {
+    background-color: var(--orange);
+    color: var(--dark);
 }
