@@ -1,0 +1,16 @@
+#searchBar {
+    margin-top: 10px;
+  }
+  
+  #searchBar input {
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  #searchBar button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #712424;
+    border: none;
+    cursor: pointer;
+  }

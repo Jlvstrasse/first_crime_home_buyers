@@ -45,3 +45,16 @@ window.onload = function () {
     searchWord(word);
     searchGifs(word);
 }
+
+const toggleSearchButton = document.getElementById('toggleSearchButton');
+const searchBar = document.getElementById('searchBar');
+
+toggleSearchButton.addEventListener('click', function() {
+  if (searchBar.style.display === 'none') {
+    searchBar.style.display = 'block';
+    toggleSearchButton.textContent = 'Hide Search Bar';
+  } else {
+    searchBar.style.display = 'none';
+    toggleSearchButton.textContent = 'Show Search Bar';
+  }
+});
