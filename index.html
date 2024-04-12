@@ -28,28 +28,39 @@
         <section>
             <h3> &#129300; What's the Word?</h3>
 
+            <button id="modal-trigger" class="button is-primary">Click to Search</button>
+
+            <div id="modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                   <div id="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="button" id="searchBtn">Search</button>
+                  </div>
+                </div>
+                <button class="modal-close" aria-label="close"></button>
+            </div>
+
+            
             <div id="searchBar">
               <input type="text" id="searchInput" placeholder="Search...">
               <button type="button" id="searchBtn">Search</button>
             </div>
-
+            
         </section>
 
         <div id="results">
             
         </div>
     </main>
-
-
-
-
-        
+     
     <script src= "./assets/js/script.js"></script>  
 
     <footer>
         <h2>Created by MD, JM, JV</h2>
         <h2>&copy 2024</h2>
     </footer>
+
 
 </body>
 
