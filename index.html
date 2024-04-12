@@ -2,16 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>WordPlay Home</title>
 </head>
 
 <body>
-    <header>
-        <h1>WORD PLAY</h1>
-    </header>
 
-    <main>
+    <Header>
+        <h1 class="is-flex is-align-items-center is-justify-content-center is-size-1-mobile">WORD PLAY</h1>
+    </Header>
+
+
+    <main class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column is-size-3">
         <section>
             <h2>Definitions with a GIF &#128512;</h2>
             <figure class="container">
@@ -21,16 +27,30 @@
 
         <section>
             <h3> &#129300; What's the Word?</h3>
-            <button id="toggleSearchButton">Lets Go</button>
+
+            
             <div id="searchBar" style="display: none;">
               <input type="text" placeholder="Search...">
               <button>Search</button>
             </div>
+
         </section>
+
+        <div id="results">
+            
+        </div>
     </main>
 
 
 
-    <script src= "script.js"></script>  
+
+        
+    <script src= "./assets/js/script.js"></script>  
+
+    <footer>
+        <h2>Created by MD, JM, JV</h2>
+        <h2>&copy 2024</h2>
+    </footer>
+
 </body>
-</html>
+

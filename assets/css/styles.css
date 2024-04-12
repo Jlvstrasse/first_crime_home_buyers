@@ -1,16 +1,53 @@
-#searchBar {
-    margin-top: 10px;
-  }
-  
-  #searchBar input {
-    padding: 5px;
-    margin-right: 5px;
-  }
-  
-  #searchBar button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #712424;
-    border: none;
-    cursor: pointer;
-  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* background-color: rgb(155, 176, 193) */
+    /* background-color: rgb(81, 130, 155); */
+    /* background-color: rgb(27, 72, 71); */
+}
+
+header {
+    border-bottom: 2px solid rgb(246, 153, 92);
+    color: rgb(234, 223, 180);
+    font-size: 5rem; 
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: rgb(81, 130, 155);
+ } 
+
+main {
+    padding-top: 30px;
+    color: rgb(234, 223, 180);
+    background-color: rgb(155, 176, 193)
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+figure {
+    border: 2px solid rgb(81, 130, 155);
+    padding: 1rem;
+    background-color: rgb(246, 153, 92);
+    margin: 2rem;
+}
+
+.Searchbar {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+footer {
+    color: rgb(246, 153, 92);
+    background-color: rgb(81, 130, 155);
+}
