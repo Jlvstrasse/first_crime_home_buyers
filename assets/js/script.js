@@ -86,4 +86,6 @@ function printGifResults(word) {
     imgEl.setAttribute('src', `${word.data[0].images.downsized.url}`)
     resultsEl.append(imgEl);
 }
+
 searchBtn.addEventListener('click', searchTotal);
+
