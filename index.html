@@ -11,15 +11,17 @@
 </head>
 
 <body>
+
     <Header>
         <h1 class="is-flex is-align-items-center is-justify-content-center is-size-1-mobile">WORD PLAY</h1>
     </Header>
 
+
     <main class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column is-size-3">
         <section>
             <h2>Definitions with a GIF &#128512;</h2>
-            <figure>
-                <iframe src="https://giphy.com/embed/OF0yOAufcWLfi" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebs-jimmy-fallon-OF0yOAufcWLfi"><hidden class="via GIPHY"></hidden></a></p>
+            <figure class="container">
+                <iframe src="https://giphy.com/embed/OF0yOAufcWLfi" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebs-jimmy-fallon-OF0yOAufcWLfi"><hidden class="via GIPHY"></hidden></a></p>    
             </figure>
         </section>
 
@@ -31,23 +33,34 @@
             <div id="modal" class="modal">
                 <div class="modal-background"></div>
                 <div class="modal-content">
-                    <p>Search Any Word</p>
-                    <input type="text" placeholder="Search...">
+                   <div id="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="button" id="searchBtn">Search</button>
+                  </div>
                 </div>
                 <button class="modal-close" aria-label="close"></button>
             </div>
 
             
-            
+            <div id="searchBar">
+              <input type="text" id="searchInput" placeholder="Search...">
+              <button type="button" id="searchBtn">Search</button>
+            </div>
             
         </section>
+
+        <div id="results">
+            
+        </div>
     </main>
+     
+    <script src= "./assets/js/script.js"></script>  
 
     <footer>
         <h2>Created by MD, JM, JV</h2>
         <h2>&copy 2024</h2>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+
 </body>
 
