@@ -19,33 +19,31 @@
 
     <main class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column is-size-3">
         <section>
-            <h2>Definitions with a GIF &#128512;</h2>
+            <h2 class="subtitle">Definitions with a GIF &#128512;</h2>
             <figure class="container">
                 <iframe src="https://giphy.com/embed/OF0yOAufcWLfi" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebs-jimmy-fallon-OF0yOAufcWLfi"><hidden class="via GIPHY"></hidden></a></p>    
             </figure>
         </section>
 
-        <section>
-            <h3> &#129300; What's the Word?</h3>
+        <section class="be-centered">
+            <h2 class="under"> &#129300; What's the Word?</h2>
 
             <button id="modal-trigger" class="button is-primary">Click to Search</button>
 
             <div id="modal" class="modal">
-                <div class="modal-background"></div>
+                <!-- <div class="modal-background"></div> -->
                 <div class="modal-content">
+                    <h2>Enter a word you would like to search</h2>
+                    <iframe src="https://giphy.com/embed/NS7gPxeumewkWDOIxi" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/detectivepikachumovie-NS7gPxeumewkWDOIxi"></a></p>
                    <div id="searchBar">
                     <input type="text" id="searchInput" placeholder="Search...">
                     <button type="button" id="searchBtn">Search</button>
+                    <button class="modal-close" aria-label="close"></button>
                   </div>
                   <div id="search-history"></div>
                 </div>
-                <button class="modal-close" aria-label="close"></button>
+                
             </div>
-            
-            <!-- <div id="searchBar">
-              <input type="text" id="searchInput" placeholder="Search...">
-              <button type="button" id="searchBtn">Search</button>
-            </div> -->
             
         </section>
 
@@ -60,6 +58,7 @@
 
     <footer>
         <h2>Created by MD, JM, JV</h2>
+        
         <h2>&copy 2024</h2>
     </footer>
 
