@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:ital@0;1&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>WordPlay Home</title>
@@ -12,39 +14,50 @@
 
 <body>
 
-    <Header>
-        <h1 class="is-flex is-align-items-center is-justify-content-center is-size-1-mobile">WORD PLAY</h1>
+    <Header class="is-flex">
+        <div class="wordplay is-flex">
+            <img class="word-img"src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGhlMW9taWp4MWgyeDZ5NDR6cmNrdThhaGdvcGhzMDZ5YW14bTFtbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6wDSKQodE0cErI2mXB/giphy.gif"
+                alt="word">
+            <img class="play-img"src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmwzM2cwNG9icmQyZ2FubXc4d3NmYnoxa2ZpZG9kMDlqazA1OGpjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8b29QJQgVwUW4/giphy.gif"
+                alt="play">
+            <p class="wordplay-definition">(noun) playful use of words</p>
+        </div>
     </Header>
 
 
     <main class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column is-size-3">
         <section>
             <h2 class="subtitle">Definitions with a GIF &#128512;</h2>
-            <figure class="container">
-                <iframe src="https://giphy.com/embed/OF0yOAufcWLfi" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/celebs-jimmy-fallon-OF0yOAufcWLfi"><hidden class="via GIPHY"></hidden></a></p>    
+            <figure>
+            <img width="480" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXVmdzRya2luemJya3N1Z21mNW5uMWY0anZpb2p2MXQ5dHh0NjJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OF0yOAufcWLfi/giphy.gif" alt="jimmy fallon welcomes you">
             </figure>
         </section>
 
         <section class="be-centered">
             <h2 class="under"> &#129300; What's the Word?</h2>
 
-            <button id="modal-trigger" class="button is-primary">Click to Search</button>
+            <button id="modal-trigger" class="button is-primary">Click to Begin</button>
 
             <div id="modal" class="modal">
                 <!-- <div class="modal-background"></div> -->
-                <div class="modal-content">
+                <div class="modal-content" id="modal-content">
                     <h2>Enter a word you would like to search</h2>
-                    <iframe src="https://giphy.com/embed/NS7gPxeumewkWDOIxi" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/detectivepikachumovie-NS7gPxeumewkWDOIxi"></a></p>
-                   <div id="searchBar">
-                    <input type="text" id="searchInput" placeholder="Search...">
-                    <button type="button" id="searchBtn">Search</button>
+                    
+                    <img height="600" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGw1Mnh2azkzcXg4eThzZm5xc3FkMjNrOWZoZjVyc3piZXgycXV0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NS7gPxeumewkWDOIxi/giphy.gif" alt="pikachu searching">
+                    <div id="searchBar">
+                        <form action="submit" id="search-form">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                            <button type="submit" id="searchBtn" class="search">Search</button>
+
+                        </form>
+
+                    </div>
                     <button class="modal-close" aria-label="close"></button>
-                  </div>
-                  <div id="search-history"></div>
+                    <div id="search-history" class="is-flex is-justify-content-space-around"></div>
                 </div>
-                
+
             </div>
-            
+
         </section>
 
         <div id="results">
@@ -53,15 +66,20 @@
 
         </div>
     </main>
-     
-    <script src= "./assets/js/script.js"></script>  
 
-    <footer>
-        <h2>Created by MD, JM, JV</h2>
-        
-        <h2>&copy 2024</h2>
+    <script src="./assets/js/script.js"></script>
+
+    <footer class="is-flex is-justify-content-space-around is-align-items-center">
+        <div>
+            <h2>Powered by</h2>
+            <a href="https://giphy.com/"><img src="./assets/images/GIPHY Transparent 18px.png" alt=""></a>
+            <p style="color: white">& wordsAPI</p>
+        </div>
+        <div>
+            <h2>Created by MD, JM, JV</h2>
+            <h2>&copy 2024</h2>
+        </div>
     </footer>
 
 
 </body>
-
