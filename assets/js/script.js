@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 searchBtn.addEventListener('click', function () {
     toggleModal();
+    saveSearchHistory();
     searchTotal();
     
 });
@@ -140,10 +141,14 @@ searchBtn.addEventListener('click', function () {
 // load search history from localStorage
 function loadSearchHistory() {
     let searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+    console.log(searchHistory);
 
 }
 
 // save search to localStorage
 function saveSearchHistory() {
-
+    let storedSearches = JSON.parse(localStorage.getItem('searches')) || [];
+    storedSearches.push(searchInput.value);
+    console.log(searchInput.value);
+    localStorage.setItem('searches', JSON.stringify(storedSearches))
 }
