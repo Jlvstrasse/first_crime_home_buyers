@@ -101,9 +101,9 @@ function printGifResults(word) {
         imgLink.append(imgEl);
         gifResultsEl.append(imgLink);
     }
-    giphyBrand.textContent = `Powered by `;
-    giphyBrand.append(giphyBrandImg);
-    gifResultsEl.append(giphyBrand);
+    // giphyBrand.textContent = `Powered by `;
+    // giphyBrand.append(giphyBrandImg);
+    // gifResultsEl.append(giphyBrand);
 };
 
 
