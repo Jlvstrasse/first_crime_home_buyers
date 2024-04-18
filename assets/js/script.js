@@ -3,9 +3,6 @@ const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#searchBtn');
 const searchForm = document.querySelector('#search-form');
 const resultsEl = document.querySelector('#results');
-const resultsCard = document.createElement('div');
-resultsCard.setAttribute('class', 'results-card');
-resultsCard.setAttribute('id', 'resultsCard');
 const gifResultsEl = document.querySelector('#gif-results');
 const wordResultsEl = document.querySelector('#word-results');
 
@@ -140,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
 searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
     toggleModal();
-    saveSearchHistory();
     searchTotal();
 
 });

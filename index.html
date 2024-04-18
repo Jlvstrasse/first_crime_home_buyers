@@ -17,11 +17,13 @@
 
     <Header class="is-flex">
         <div class="wordplay is-flex">
-            <img class="word-img"src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGhlMW9taWp4MWgyeDZ5NDR6cmNrdThhaGdvcGhzMDZ5YW14bTFtbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6wDSKQodE0cErI2mXB/giphy.gif"
+            <img class="word-img"
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGhlMW9taWp4MWgyeDZ5NDR6cmNrdThhaGdvcGhzMDZ5YW14bTFtbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6wDSKQodE0cErI2mXB/giphy.gif"
                 alt="word">
-            <img class="play-img"src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmwzM2cwNG9icmQyZ2FubXc4d3NmYnoxa2ZpZG9kMDlqazA1OGpjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8b29QJQgVwUW4/giphy.gif"
+            <img class="play-img"
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmwzM2cwNG9icmQyZ2FubXc4d3NmYnoxa2ZpZG9kMDlqazA1OGpjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8b29QJQgVwUW4/giphy.gif"
                 alt="play">
-            <p class="wordplay-definition">(noun) playful use of words</p>
+            <p class="wordplay-definition">(noun): a humorous play on words</p>
         </div>
 
     </Header>
@@ -29,14 +31,15 @@
 
     <main class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column is-size-3">
         <section>
-            <h2 class="subtitle">Definitions with a GIF &#128512;</h2>
+            <h2 class="subtitle">😀 Definitions with GIFs 😀</h2>
             <figure>
-            <img width="480" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXVmdzRya2luemJya3N1Z21mNW5uMWY0anZpb2p2MXQ5dHh0NjJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OF0yOAufcWLfi/giphy.gif" alt="jimmy fallon welcomes you">
+                <img class="welcome"
+                    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXVmdzRya2luemJya3N1Z21mNW5uMWY0anZpb2p2MXQ5dHh0NjJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OF0yOAufcWLfi/giphy.gif"
+                    alt="jimmy fallon welcomes you">
             </figure>
         </section>
 
         <section class="be-centered">
-            <h2 class="under"> &#129300; What's the Word?</h2>
 
             <button id="modal-trigger" class="button is-primary">Click to Begin</button>
 
@@ -44,16 +47,15 @@
                 <!-- <div class="modal-background"></div> -->
                 <div class="modal-content" id="modal-content">
                     <h2>Enter a word you would like to search</h2>
-                    
-                    <img height="600" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGw1Mnh2azkzcXg4eThzZm5xc3FkMjNrOWZoZjVyc3piZXgycXV0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NS7gPxeumewkWDOIxi/giphy.gif" alt="pikachu searching">
-                    <div id="searchBar">
-                        <form action="submit" id="search-form">
-                            <input type="text" id="searchInput" placeholder="Search...">
-                            <button type="submit" id="searchBtn" class="search">Search</button>
 
-                        </form>
+                    <img height="600"
+                        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGw1Mnh2azkzcXg4eThzZm5xc3FkMjNrOWZoZjVyc3piZXgycXV0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NS7gPxeumewkWDOIxi/giphy.gif"
+                        alt="pikachu searching">
 
-                    </div>
+                    <form action="submit" class="search-form" id="search-form">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Wordplay">
+                        <button type="submit" id="searchBtn" class="search">Search</button>
+                    </form>
                     <button class="modal-close" aria-label="close"></button>
                     <div id="search-history" class="is-flex is-justify-content-space-around"></div>
                 </div>
