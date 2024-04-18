@@ -46,18 +46,18 @@
             <div id="modal" class="modal">
                 <!-- <div class="modal-background"></div> -->
                 <div class="modal-content" id="modal-content">
-                    <h2>Enter a word you would like to search</h2>
+                    <h2>Search</h2>
 
                     <img height="600"
                         src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGw1Mnh2azkzcXg4eThzZm5xc3FkMjNrOWZoZjVyc3piZXgycXV0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NS7gPxeumewkWDOIxi/giphy.gif"
                         alt="pikachu searching">
 
                     <form action="submit" class="search-form" id="search-form">
-                        <input type="text" class="search-input" id="searchInput" placeholder="Wordplay">
+                        <label for="searchInput">Enter a word</label><input type="text" class="search-input" id="searchInput" placeholder="Wordplay">
                         <button type="submit" id="searchBtn" class="search">Search</button>
                     </form>
                     <button class="modal-close" aria-label="close"></button>
-                    <div id="search-history" class="is-flex is-justify-content-space-around"></div>
+                    <div id="search-history" class="is-flex is-justify-content-space-around is-flex-wrap-wrap"></div>
                 </div>
 
             </div>
