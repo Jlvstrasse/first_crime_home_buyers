@@ -12,7 +12,7 @@ https://github.com/Jlvstrasse/word_play
 
 ## Usage
 Enter a word into the search bar for the application to give you the information. Example below:
-![Modal](./assets/images/WordPlayModal.jpg)
+![Modal](./assets/images/searchmodalnew.jpg)
 
 ## License
 MIT License
@@ -25,3 +25,4 @@ We used https://api.giphy.com for the GIPHY API.<br>
 We used https://wordsapiv1.p.rapidapi.com for the Words API.
 
 ## Deployed Application
+https://jlvstrasse.github.io/word_play/
