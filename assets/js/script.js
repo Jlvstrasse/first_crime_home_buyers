@@ -21,7 +21,6 @@ function searchWord() {
 
     fetch(wordsURL, options)
         .then(function (response) {
-            console.log(response.status);
             if (response.status === 404) {
                 throw new Error('Word not found')
             }
@@ -34,11 +33,18 @@ function searchWord() {
         .then(function (data) {
             console.log(data);
             console.log(data.results);
+            const errorMessageDiv = document.querySelector('#error-message');
+            errorMessageDiv.innerHTML = '';
             saveSearchHistory(data.word);
             printWordResults(data);
+            toggleModal();
         })
         .catch(function (error) {
-            alert('Sorry, there are no results for the word you have searched :(')
+            const errorMessageDiv = document.querySelector('#error-message');
+            const errorMessage = document.createElement('p');
+            errorMessageDiv.innerHTML = '';
+            errorMessage.textContent ='Sorry, there are no results for the word you have searched, please try again!';
+            errorMessageDiv.append(errorMessage);
             console.error(error);
         });
 
@@ -58,8 +64,6 @@ function searchGifs() {
         })
         .then(function (word) {
             gifResults = word.data;
-            console.log(gifResults);
-            console.log(gifResults[0].images.downsized.url);
             printGifResults(word);
         })
         .catch(function (error) {
@@ -139,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // when the form is submitted, save the search to search history, close the modal, display gifs and definitions
 searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    toggleModal();
+    // toggleModal();
     searchTotal();
 });
 
@@ -154,14 +158,11 @@ function loadSearchHistory() {
         historyBtn.setAttribute('class', 'search-history');
         searchHistoryDiv.append(historyBtn);
         historyBtn.addEventListener('click', function () {
-            toggleModal();
             searchInput.value = search;
             searchTotal();
         })
 
     });
-
-    console.log(searchHistory);
 
 }
 
