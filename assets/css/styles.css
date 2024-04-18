@@ -160,7 +160,7 @@ h3 {
 }
 
 .results-list {
-    padding: 20px;
+    padding: 20px 50px;
     margin: 5px 20px 20px 20px;
     border: 2px solid var(--orange);
     background-color: var(--dark);
