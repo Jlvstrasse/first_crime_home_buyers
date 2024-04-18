@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
     toggleModal();
+    saveSearchHistory();
     searchTotal();
 
 });
@@ -147,6 +148,7 @@ searchForm.addEventListener('submit', function (event) {
 // load search history from localStorage
 function loadSearchHistory() {
     let searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+
     searchHistory.forEach(search => {
         const historyBtn = document.createElement('button');
         const searchHistoryDiv = document.querySelector('#search-history');
@@ -160,11 +162,13 @@ function loadSearchHistory() {
         })
 
     });
+
     console.log(searchHistory);
 
 }
 
 // save search to localStorage
+
 function saveSearchHistory(wordToSave) {
     let storedSearches = JSON.parse(localStorage.getItem('searchHistory')) || [];
     let index = storedSearches.indexOf(wordToSave);
@@ -179,3 +183,4 @@ function saveSearchHistory(wordToSave) {
 }
 // load localStorage data when the window loads
 window.addEventListener('load', loadSearchHistory);
+
