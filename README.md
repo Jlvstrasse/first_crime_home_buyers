@@ -2,6 +2,7 @@
 
 ## Description
 This application allows you to search a word and returns the definition and a GIF for that word.
+![WordPlay](./assets/images/WordPlay%20main.jpg)
 
 ## Technologies
 HTML, CSS, Bulma, Javascript, GIPHY API, and Words API
@@ -19,7 +20,7 @@ MIT License
 Michael Daleo, Jose Gomez-Martinez, and Jessica Vorderstrasse
 
 ## Documentation
-We used https://api.giphy.com for the GIPHY API.
+We used https://api.giphy.com for the GIPHY API.<br>
 We used https://wordsapiv1.p.rapidapi.com for the Words API.
 
 ## Deployed Application
