@@ -1,7 +1,7 @@
 # Word-Play
 
 ## Description
-This application allows you to search a word and returns the definition and a GIF for that word.
+This application allows you to search a word and returns the definition and four GIFs for that word.
 ![WordPlay](./assets/images/WordPlay%20main.jpg)
 
 ## Technologies
@@ -12,6 +12,7 @@ https://github.com/Jlvstrasse/word_play
 
 ## Usage
 Enter a word into the search bar for the application to give you the information. Example below:
+![Modal](./assets/images/WordPlayModal.jpg)
 
 ## License
 MIT License
