@@ -1,6 +1,7 @@
 // let gifResults = [];
 const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#searchBtn');
+const searchForm = document.querySelector('#search-form');
 const resultsEl = document.querySelector('#results');
 const resultsCard = document.createElement('div');
 resultsCard.setAttribute('class', 'results-card');
@@ -23,19 +24,25 @@ function searchWord() {
 
     fetch(wordsURL, options)
         .then(function (response) {
+            console.log(response.status);
+            if (response.status === 404) {
+                throw new Error('Word not found')
+            }
             if (!response.ok) {
                 return response.json().then(error => { throw error; });
             }
+            console.log(response);
             return response.json();
         })
-        .then(function (word) {
-            console.log(word);
-            console.log(word.results);
-            printWordResults(word);
+        .then(function (data) {
+            console.log(data);
+            console.log(data.results);
+            saveSearchHistory(data.word);
+            printWordResults(data);
         })
         .catch(function (error) {
             alert('Sorry, there are no results for the word you have searched :(')
-            console.error('Error fetching data:', error);
+            console.error(error);
         });
 
 
@@ -79,7 +86,7 @@ function printWordResults(word) {
     resultsList.setAttribute('id', 'resultsList');
     resultsList.setAttribute('class', 'results-list');
     h3El.textContent = `${word.word}`;
-    
+
     // lists all the definitions in a numbered list
     for (let i = 0; i < word.results.length; i++) {
         const listEl = document.createElement('li');
@@ -90,9 +97,6 @@ function printWordResults(word) {
 }
 // print the gifs onto the page
 function printGifResults(word) {
-    const giphyBrand = document.createElement('p');
-    const giphyBrandImg = document.createElement('img');
-    giphyBrandImg.setAttribute('src', './assets/images/GIPHY Transparent 18px.png');
     for (let i = 0; i < word.data.length; i++) {
         const imgEl = document.createElement('img');
         const imgLink = document.createElement('a');
@@ -101,9 +105,7 @@ function printGifResults(word) {
         imgLink.append(imgEl);
         gifResultsEl.append(imgLink);
     }
-    // giphyBrand.textContent = `Powered by `;
-    // giphyBrand.append(giphyBrandImg);
-    // gifResultsEl.append(giphyBrand);
+
 };
 
 
@@ -112,6 +114,7 @@ function toggleModal() {
     modal.classList.toggle('is-active');
 }
 
+// Bulma modal function
 document.addEventListener('DOMContentLoaded', function () {
     const modalTrigger = document.getElementById('modal-trigger');
     const modal = document.getElementById('modal');
@@ -131,24 +134,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-searchBtn.addEventListener('click', function () {
+
+
+// when the form is submitted, save the search to search history, close the modal, display gifs and definitions
+searchForm.addEventListener('submit', function (event) {
+    event.preventDefault();
     toggleModal();
     saveSearchHistory();
     searchTotal();
-    
+
 });
 
 // load search history from localStorage
 function loadSearchHistory() {
     let searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+
+    searchHistory.forEach(search => {
+        const historyBtn = document.createElement('button');
+        const searchHistoryDiv = document.querySelector('#search-history');
+        historyBtn.textContent = search;
+        historyBtn.setAttribute('class', 'search-history');
+        searchHistoryDiv.append(historyBtn);
+        historyBtn.addEventListener('click', function () {
+            toggleModal();
+            searchInput.value = search;
+            searchTotal();
+        })
+
+    });
+
     console.log(searchHistory);
 
 }
 
 // save search to localStorage
-function saveSearchHistory() {
-    let storedSearches = JSON.parse(localStorage.getItem('searches')) || [];
-    storedSearches.push(searchInput.value);
-    console.log(searchInput.value);
-    localStorage.setItem('searches', JSON.stringify(storedSearches))
+
+function saveSearchHistory(wordToSave) {
+    let storedSearches = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    let index = storedSearches.indexOf(wordToSave);
+    if (index !== -1) {
+        storedSearches.splice(index, 1);
+    };
+    storedSearches.push(wordToSave);
+    if (storedSearches.length > 5) {
+        storedSearches.splice(0, storedSearches.length - 5)
+    }
+    localStorage.setItem('searchHistory', JSON.stringify(storedSearches));
 }
+// load localStorage data when the window loads
+window.addEventListener('load', loadSearchHistory);
+

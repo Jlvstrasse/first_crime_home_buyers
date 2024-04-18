@@ -19,12 +19,37 @@
 header {
     border-bottom: 2px solid var(--orange);
     color: var(--words);
-    font-size: 5rem; 
+    font-size: 5rem;
     display: flex;
     justify-content: center;
     padding: 1rem 0;
     background-color: var(--dark);
- } 
+}
+
+.wordplay {
+    position: relative;
+}
+
+header img {
+    height: 200px;
+}
+
+.word-img {
+border-radius: 5px 0 0 5px;
+}
+
+.play-img {
+border-radius: 0 5px 5px 0;
+}
+
+header p {
+    font-size: 18px;
+    position: absolute;
+    left: 133px;
+    width: 250px;
+    top: 170px;
+}
+
 
 main {
     color: var(--words);
@@ -65,8 +90,8 @@ footer {
     left: 50%;
     max-width: fit-content;
     max-height: fit-content;
-    transform: translate(-50%, -50%); 
-    
+    transform: translate(-50%, -50%);
+
 }
 
 
@@ -74,7 +99,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 
 
@@ -114,7 +139,7 @@ footer {
     background-color: var(--dark);
     padding: 20px;
     margin: 20px;
-    max-width: 80%; 
+    max-width: 80%;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -157,4 +182,13 @@ h3 {
     top: 5px;
     right: 5px;
     background-color: var(--orange);
+}
+
+button.search-history {
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    background-color: var(--orange);
+    border: 2px solid var(--light);
+    border-radius: 10px;
 }
