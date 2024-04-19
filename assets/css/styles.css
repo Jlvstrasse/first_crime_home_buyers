@@ -26,6 +26,10 @@ header {
     background-color: var(--dark);
 }
 
+body {
+    background-color: var(--dark);
+}
+
 .wordplay {
     position: relative;
 }
@@ -86,6 +90,9 @@ footer {
     color: var(--orange);
     background-color: var(--dark);
     text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .modal {
