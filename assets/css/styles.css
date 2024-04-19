@@ -31,7 +31,8 @@ header {
 }
 
 header img {
-    height: 200px;
+    min-width: 0;
+    flex: 1 1 200px;
 }
 
 .word-img {
@@ -45,9 +46,11 @@ border-radius: 0 5px 5px 0;
 header p {
     font-size: 18px;
     position: absolute;
-    left: 100px;
-    width: 300px;
-    top: 170px;
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 

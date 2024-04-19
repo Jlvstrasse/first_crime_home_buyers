@@ -178,6 +178,5 @@ function saveSearchHistory(wordToSave) {
     }
     localStorage.setItem('searchHistory', JSON.stringify(storedSearches));
 }
-// load localStorage data when the window loads
-window.addEventListener('load', loadSearchHistory);
+
 
