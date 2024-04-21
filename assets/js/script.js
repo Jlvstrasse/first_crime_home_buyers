@@ -1,6 +1,6 @@
-// let gifResults = [];
-const searchInput = document.querySelector('#searchInput');
-const searchBtn = document.querySelector('#searchBtn');
+// variables to access the HTML elements
+const searchInput = document.querySelector('#search-input');
+const searchBtn = document.querySelector('#search-button');
 const searchForm = document.querySelector('#search-form');
 const resultsEl = document.querySelector('#results');
 const gifResultsEl = document.querySelector('#gif-results');
@@ -62,9 +62,9 @@ function searchGifs() {
             }
             return response.json();
         })
-        .then(function (word) {
-            gifResults = word.data;
-            printGifResults(word);
+        .then(function (data) {
+            gifResults = data.data;
+            printGifResults(data);
         })
         .catch(function (error) {
 
